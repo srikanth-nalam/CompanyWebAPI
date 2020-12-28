@@ -1,0 +1,18 @@
+version: '3.4'
+
+services:
+  companydb:
+    image: "mcr.microsoft.com/mssql/server:2017-latest"
+    ports:
+    - "1433:1433"
+    environment:
+     - ACCEPT_EULA=Y
+     - SA_PASSWORD=1Secure*Password1
+
+  companyownerwebapi:
+    image: ${DOCKER_REGISTRY-}companyownerwebapi
+    build:
+      context: .
+      dockerfile: Dockerfile
+    depends_on:
+     - companydb
