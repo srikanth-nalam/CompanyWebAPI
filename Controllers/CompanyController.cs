@@ -35,7 +35,7 @@ namespace CompanyOwnerWebAPI.Controllers
             return Ok(await _companyService.GetAllCompanies());
         }
 
-        [HttpGet("{id}")]
+        [HttpGet("{Id}")]
         public async Task<IActionResult> GetCompanyDetail(int Id)
         {
             return Ok(await _companyService.GetCompanyDetail(Id)); 

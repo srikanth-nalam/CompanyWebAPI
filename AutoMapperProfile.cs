@@ -1,7 +1,7 @@
 ﻿using AutoMapper;
 using CompanyOwnerWebAPI.Dtos;
 using CompanyOwnerWebAPI.Models;
-
+using System.Linq;
 
 namespace CompanyOwnerWebAPI
 {
@@ -11,7 +11,8 @@ namespace CompanyOwnerWebAPI
         {
             CreateMap<AddCompanyDto, Company>();
 
-            CreateMap<Company, GetCompanyDto>();
+            CreateMap<Company, GetCompanyDto>()
+                  .ForMember(dto => dto.UserDetails, c => c.MapFrom(c => c.CompanyUsers.Select(cu => cu.User)));
 
             CreateMap<User, GetUserDto>();
 
