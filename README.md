@@ -2,7 +2,7 @@
 
 CompanyWebAPI is a dockerized project having tinywebapi containg multiple methods to use . This contains two projects WebAPI project and Docker Compose project.Docker Compose project can be used to run the Web API and Sql Server in a containerized format together.
 
-Following are the methods available in CompanyWebAPI.Project contains Swagger File which would list down the following methods
+Following are the methods available in CompanyWebAPI.Project contains Swagger File which would list down the following methods at '/index.html'
 
  1. Create new Company
  
