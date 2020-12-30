@@ -11,7 +11,9 @@ namespace CompanyOwnerWebAPI.Dtos
 
         public string Country { get; set; }
 
-        public long PhoneNumber { get; set; }
-       
+        public long PhoneNumber { get; set; }       
+
+        public List<GetUserDto> UserDetails { get; set; }
+        
     }
 }
